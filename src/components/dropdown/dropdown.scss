@@ -1,0 +1,222 @@
+@import "/src/pages/style-table.css";
+
+.dropdownControl {
+  --dropdown-background: var(--purple);
+  --dropdown-border: none;
+  --dropdown-color: var(--white);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  //min-width: ; TODO: узнать значение
+  margin-bottom: 2rem;
+  position: relative;
+
+  &.show .dropdownList {
+    display: block;
+  }
+}
+
+.dropdownControl:after {
+  font-family: "keenlyicons" !important;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--dropdown-color);
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  top: calc(50% - 0.5rem);
+  right: 2rem;
+  content: "\e916"; //TODO: заменить на иконку, удалить лишние стили, выровнять
+  pointer-events: none;
+  will-change: top;
+  transition: top 0.3s ease, transform 0.3s ease;
+}
+
+.dropdownControl:focus-within:after {
+  transform: rotate(180deg);
+}
+
+.dropdownButton {
+  font: inherit;
+  font-size: var(--g-font-size);
+  line-height: 2.5rem;
+  color: var(--dropdown-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 4rem 1.5rem 1.5rem;
+  border: var(--dropdown-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--dropdown-background);
+  outline: none;
+  cursor: pointer;
+}
+
+.dropdownButtonLogo {
+  display: none;
+  margin-right: 1rem;
+}
+
+.dropdownButtonText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dropdownList {
+  width: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: auto;
+  background: var(--white);
+  box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.16);
+  transform: translateY(1.25rem);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9999;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdownControl:focus-within .dropdownList {
+  transform: translateY(0.75rem);
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdownListTitle {
+  font: inherit;
+  font-size: var(--g-font-size);
+  line-height: 1.2;
+  color: var(--black);
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  border: none;
+  padding: 1.5rem;
+  white-space: nowrap;
+}
+
+.dropdownListItem {
+  font: inherit;
+  font-size: var(--g-font-size);
+  line-height: 1.2;
+  color: var(--black);
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 1rem;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+  padding: 1.5rem;
+
+  .dropdownListItemIcon {
+    margin-right: 1rem;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .dropdownListItemText {
+    display: inline-flex;
+    padding: 0 3rem 0 0;
+    position: relative;
+  }
+
+  &.dropdownListItemActive {
+    font-weight: bold;
+
+    .dropdownListItemText {
+      &:after {
+        font-family: "keenlyicons";
+        font-size: var(--g-font-size);
+        display: inline-block;
+        position: absolute;
+        top: calc(50% - 1rem);
+        right: 0.5rem;
+        content: "\e90b";
+      }
+    }
+  }
+}
+
+.dropdownListItem:hover,
+.dropdownListItem:focus {
+  background: var(--light-purple);
+}
+
+
+.dropdownControl.company {
+  width: 100%;
+
+  &:after {
+    right: 1.5rem;
+  }
+
+  .dropdownButton {
+    padding: 1.5rem 4rem 1.5rem 1.5rem;
+  }
+
+  .dropdownButtonLogo {
+    display: flex;
+  }
+
+  .dropdownList {
+    width: 40rem;
+  }
+
+  .dropdownListItem {
+    white-space: normal;
+  }
+}
+
+.dropdownControl.small {
+  height: 100%;
+  max-height: 4rem;
+
+  .dropdownButton{
+    line-height: 3rem;
+    padding: 0.5rem 4rem 0.5rem 2rem;
+  }
+}
+
+.dropdownControl {
+  &.isGrey {
+    --dropdown-background: #F5F4F6;
+    --dropdown-border: 1px solid rgba(0, 0, 0, 0.1);
+    --dropdown-color: var(--black);
+  }
+
+  &.isBlue {
+    --dropdown-background: var(--purple);
+    --dropdown-border: none;
+    --dropdown-color: var(--white);
+  }
+}
+
+
+.dropdownControl.widthContent {
+  width: fit-content;
+}
+
+
+
+

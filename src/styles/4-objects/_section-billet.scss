@@ -1,0 +1,8 @@
+.sectionBillet {
+  --section-billet-padding: 2rem;
+
+  padding: var(--section-billet-padding);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: var(--white);
+}

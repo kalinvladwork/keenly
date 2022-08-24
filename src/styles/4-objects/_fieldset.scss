@@ -1,0 +1,12 @@
+.fieldset {
+  --grid-line-margin: 1.5rem;
+
+  display: grid;
+  grid-row-gap: var(--grid-line-margin);
+  grid-column-gap: var(--grid-line-margin);
+
+  &.horizontal {
+    grid-auto-flow: column;
+    justify-content: flex-start;
+  }
+}

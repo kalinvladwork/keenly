@@ -1,0 +1,118 @@
+.table {
+  --grid-template-columns: 35rem repeat(auto-fill, 20rem);
+  --header-color: rgba(0, 0, 0, 0.5);
+  --table-background-color: var(--white);
+  --header-background-color: var(--white);
+  --border-color: rgba(0, 0, 0, 0.06);
+  --grid-line-margin: 2rem;
+
+  display: grid;
+  grid-template-columns: unset;
+  gap: 1px;
+  background-color: var(--table-background-color);
+  position: relative;
+}
+
+.tableHeaderRow {
+  color: var(--header-color);
+  display: grid;
+  grid-auto-flow: column;
+  grid-column: 1/-1;
+  grid-template-columns: var(--grid-template-columns);
+  height: 6.5rem;
+  background-color: var(--table-background-color);
+  box-shadow: 0 1px 0 0 var(--border-color);
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.leadingRow, .tableCollapsableRow {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tableHeaderCell, .tableCell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tableHeaderCell {
+  color: var(--header-color);
+  padding: 2rem;
+  background-color: var(--header-background-color);
+}
+
+.tableRow {
+  display: grid;
+}
+
+.leadingRow {
+  display: grid;
+  grid-auto-columns: 160px;
+  grid-auto-flow: column;
+  grid-column: 1/-1;
+  grid-template-columns: var(--grid-template-columns);
+  position: relative;
+}
+
+.tableCell {
+  align-self: center;
+  height: 5.5rem;
+  padding: 1.5rem 2rem;
+}
+
+.firstCell {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--table-background-color);
+  box-shadow: 1px 0 0 0 var(--border-color);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &.tableCell {
+    padding-left: 4rem;
+  }
+}
+
+.tableCollapsable {
+  display: grid;
+
+  &.isHidden {
+    display: none;
+  }
+
+  .firstCell {
+    padding-left: 7rem;
+  }
+}
+
+.tableCollapsableRow {
+  display: grid;
+  grid-auto-columns: 160px;
+  grid-auto-flow: column;
+  grid-column: 1/-1;
+  grid-template-columns: var(--grid-template-columns);
+  position: relative;
+}
+
+.tableCell.collapsable {
+  &:before {
+    font-family: "keenlyicons";
+    font-size: 1.75rem;
+    color: var(--header-color);
+    position: absolute;
+    top: 28%;
+    left: 2rem;
+    content: "\e90d";
+  }
+
+  &.isActive:before {
+    content: "\e90c";
+  }
+}

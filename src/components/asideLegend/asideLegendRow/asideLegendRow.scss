@@ -1,0 +1,25 @@
+.asideLegendRow {
+  --aside-legend-row-width: calc(var(--aside-legend-width) - (var(--section-billet-padding) * 2));
+
+  width: var(--aside-legend-row-width);
+  display: flex;
+  justify-content: space-between;
+
+  & > div:first-child {
+    text-overflow: ellipsis;
+    max-width: 60%;
+    overflow: hidden;
+  }
+
+  & > div:last-child {
+    text-overflow: ellipsis;
+    max-width: 35%;
+    overflow: hidden;
+  }
+}
+
+.asideLegendRowsCollapsable {
+  .asideLegendRow {
+    width: calc(var(--aside-legend-row-width) - 4rem);
+  }
+}

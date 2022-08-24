@@ -1,0 +1,40 @@
+{
+  "name": "keenly-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@fontsource/inter": "^4.5.0",
+    "ejs": "^3.1.6",
+    "koa": "^2.13.4",
+    "koa-static": "^5.0.0",
+    "ramda": "^0.27.1",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.3.11",
+    "postcss-sass": "^0.5.0",
+    "postcss-scss": "^4.0.1"
+  },
+  "devDependencies": {
+    "stylelint": "11.0.0",
+    "stylelint-order": "3.1.1"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "npx stylelint '**/*.scss'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "styles": [
+    "node_modules/@fontsource/inter/400.css",
+    "node_modules/fontsource-manrope/500.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keenly-box/design-templates.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keenly-box/design-templates/issues"
+  },
+  "homepage": "https://github.com/keenly-box/design-templates#readme"
+}

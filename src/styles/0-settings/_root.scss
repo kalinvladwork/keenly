@@ -1,0 +1,37 @@
+:root {
+  // Typography
+  --g-font-family: "Inter", sans-serif;
+  --g-font-size: calc(var(--grid-step) * 1.75);
+  --g-line-height: calc(var(--grid-step) * 2.5);
+  --font-weight: 400;
+
+  // Palette
+  --white: #ffffff;
+  --black: #000000;
+  --half-black: rgba(0, 0, 0, 0.5);
+  --purple: #010080;;
+  --half-purple: rgba(74, 14, 121, 0.05);
+  --light-purple: #f5f4f6;
+  --accent-color: #e3170a;
+  --warning-color: #f79824;
+  --success-color: #72b01d;
+
+  // Grid
+  --grid-step: 8px;
+  --header-height: 15rem;
+  --sidebar-width: 26rem;
+  --main-container-height: 100vh;
+
+  // Variables
+  --g-body-background-color: var(--light-purple);
+  --g-text-color: var(--black);
+  --g-main-layout-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+
+  // Settings
+  font-size: var(--grid-step);
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+

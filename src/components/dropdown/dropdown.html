@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/src/components/dropdown/dropdown.css" />
+<div class="dropdownControl <%= dropdownClasses %>">
+    <button class="dropdownButton" onclick="dropdownToggle()">
+        <span class="dropdownButtonLogo">
+            <img src="/src/assets/logo-company.svg" alt="logo">
+        </span>
+        <span class="dropdownButtonText"><%= dropdownButton %></span>
+    </button>
+    <div class="dropdownList">
+<!--        добавлять по необходимости dropdownListTitle-->
+        <div class="dropdownListTitle">All markets</div>
+        <div class="dropdownListItem">
+            <!--        добавлять по необходимости dropdownListItemIcon-->
+            <span class="dropdownListItemIcon">
+                <img src="/src/assets/logo-company.svg" alt="logo">
+            </span>
+            <span class="dropdownListItemText"><%= dropdownItem1 %></span>
+        </div>
+        <div class="dropdownListItem dropdownListItemActive"><span class="dropdownListItemText"><%= dropdownItem2 %></span></div>
+        <div class="dropdownListItem dropdownListItemActive"><span class="dropdownListItemText"><%= dropdownItem3 %></span></div>
+    </div>
+</div>
+
+<script rel="script">
+    //TODO: дописать, переделать, или отдать на откуп фреймворка, после выбора подставлять в button
+    function dropdownToggle(event) {
+        event.preventDefault();
+        document.getElementsByClassName("dropdownList").classList.toggle("show");
+    }
+</script>

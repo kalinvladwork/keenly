@@ -1,0 +1,24 @@
+.progressbar {
+  width: calc(100% - 2rem);
+  max-width: 100%;
+  height: 1rem;
+}
+
+.progress, progress {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: var(--purple);
+  transition: width 0.5s ease-in;
+  position: relative;
+}
+.progress:after, progress:after {
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 1.25rem);
+  right: -1.5rem;
+  content: attr(data-size);
+}
+
+/*# sourceMappingURL=progressbar.css.map */

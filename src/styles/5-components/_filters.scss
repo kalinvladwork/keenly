@@ -1,0 +1,23 @@
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 3rem 0;
+
+  &.isSticky {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  .button, .selectControl, .dropdownControl {
+    margin-bottom: 0;
+    margin-left: 2rem;
+  }
+
+  .buttonGroup {
+    .button, .selectControl, .dropdownControl {
+      margin-left: -0.5rem;
+    }
+  }
+}

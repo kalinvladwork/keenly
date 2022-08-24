@@ -1,0 +1,49 @@
+:root {
+  --spin-size: 2.5rem;
+  --color-spin-base: white;
+  --color-spin-highlight: rgba(142, 142, 147, 0.0001);
+}
+
+.spinner {
+  display: inline-block;
+  box-sizing: border-box;
+  width: var(--spin-size);
+  overflow: visible;
+
+  .spinner_svg {
+    display: block;
+    width: var(--spin-size); height: var(--spin-size);
+    overflow: visible;
+
+    > * {
+      transform: translate3d(0,0,0);
+      transform-origin: center;
+      fill: var(--color-spin-base);
+      animation-duration: 0.8s;
+      animation-name: circle-spin;
+      animation-iteration-count: infinite;
+
+      @for $i from 1 through 7 {
+        &:nth-of-type(#{$i}) {
+          animation-delay: #{$i*0.1}s;
+        }
+      }
+    }
+  }
+}
+
+body:not(:-moz-handler-blocked) .spinner .spinner_svg path {
+  transform: none !important;
+}
+
+@keyframes circle-spin {
+  from {
+    transform: scale(1.05);
+    fill: var(--color-spin-highlight);
+  }
+
+  to {
+    transform: scale(0.95);
+    fill: var(--color-spin-base);
+  }
+}

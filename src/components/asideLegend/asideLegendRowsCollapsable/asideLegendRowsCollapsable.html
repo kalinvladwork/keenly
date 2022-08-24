@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/src/components/asideLegend/asideLegendRowsCollapsable/asideLegendRowsCollapsable.css" />
+<div class="asideLegendRowActivate collapsable isActive <%= classesRowsCollapsable  %>">
+    <div class="asideLegendRow">
+        <div class="checkboxContainer <%= contentLeftClass %>">
+            <%- include('../../../components/checkbox/checkbox.html', {'checkboxClasses': 'isColor4 uBold', 'checkboxLabel': 'checkbox label', 'checkboxDisabled': ''}) %>
+        </div>
+        <div class="<%= contentRightClass %>">
+            <%= contentRight %>
+        </div>
+    </div>
+    <div class="asideLegendRowsCollapsable fieldset">
+        <%- include('../../../components/asideLegend/asideLegendRow/asideLegendRow.html', {'contentLeftClass': 'uBold', 'contentLeft': 'Contetnt left', 'contentRightClass': '', 'contentRight': '99999'}) %>
+        <%- include('../../../components/asideLegend/asideLegendRow/asideLegendRow.html', {'contentLeftClass': '', 'contentLeft': 'Contetnt left', 'contentRightClass': 'uBold', 'contentRight': '99999'}) %>
+        <%- include('../../../components/asideLegend/asideLegendRow/asideLegendRow.html', {'contentLeftClass': 'uBold', 'contentLeft': 'Contetnt left', 'contentRightClass': '', 'contentRight': '99999'}) %>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>EXAMPLE</title>
+</head>
+<body>
+    <%- include('../components/BaseExample/index.html', {'title': 'My custom title', 'body': 'My custom body'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'hasAddonLeft', 'errorText': '', 'inputType': 'tel', 'inputValue': '', 'inputPlaceholder': '123-45-67',  'inputId': ''}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'hasAddonRight', 'errorText': '', 'inputType': 'tel', 'inputValue': '', 'inputPlaceholder': '123-45-67',  'inputId': ''}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password hasIconLeft', 'errorText': '', 'inputType': 'password', 'inputValue': '', 'inputPlaceholder': 'Enter your password',  'inputId': 'password1'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password hasIconRight', 'errorText': '', 'inputType': 'password', 'inputValue': 'password', 'inputPlaceholder': 'Enter your password',  'inputId': 'password2'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'hasError', 'errorText': 'error error error', 'inputType': 'email', 'inputValue': '', 'inputPlaceholder': 'address@domain.com',  'inputId': ''}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': '', 'errorText': '', 'inputType': 'tel', 'inputValue': '', 'inputPlaceholder': '123-45-67', 'inputId': ''}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password weakError hasIconRight', 'errorText': 'Weak password', 'inputType': 'password', 'inputValue': 'password', 'inputPlaceholder': 'Enter your password', 'inputId': 'password3'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password normalError hasIconRight', 'errorText': 'Normal password', 'inputType': 'password', 'inputValue': 'password', 'inputPlaceholder': 'Enter your password', 'inputId': 'password3'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password secureError hasIconRight', 'errorText': 'Secure password', 'inputType': 'password', 'inputValue': 'password', 'inputPlaceholder': 'Enter your password', 'inputId': 'password3'}) %>
+
+</body>
+</html>

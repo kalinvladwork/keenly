@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/src/components/select/select.css" />
+<link rel="stylesheet" href="/src/styles/_index.scss" />
+<div class="selectControl <%= selectClasses %>">
+    <input type="hidden" name="select1" value="" data-selectControl="hidden" />
+    <input type="text" class="selectControl_selected" value="<%= value %>" aria-label="Select 1" readonly data-selectControl="selected"/>
+<!--    TODO: придумать хак для авто размера, возможно дополнительный контейнет, или убрать к херам инпут или договориться за постоянную ширину-->
+    <div class="selectControl_dropdown">
+<!--        TODO: вынести в отдельные компоненты когда станет понятно как переиспользовать-->
+        <button type="button" class="selectControl_option" data-selectControl="option1" onclick="selectControl(this);"><%= option1 %></button>
+        <button type="button" class="selectControl_option" data-selectControl="option2" onclick="selectControl(this);"><%= option2 %></button>
+        <button type="button" class="selectControl_option selectControlActive" data-selectControl="option3" onclick="selectControl(this);"><%= option3 %></button>
+        <button type="button" class="selectControl_option" data-selectControl="option4" onclick="selectControl(this);"><%= option4 %></button>
+    </div>
+</div>
+
+<script rel="script">
+    //TODO: дописать удаление selectControlActive класса с предыдущего элемента
+    window.selectControl = (option) => {
+        const parent = option.parentNode.parentNode;
+        parent.querySelector('[data-selectControl="hidden"]').value = option.dataset.selectControl;
+        parent.querySelector('[data-selectControl="selected"]').value = option.innerHTML;
+        document.activeElement.classList.add('selectControlActive');
+        document.activeElement.blur();
+    };
+    document.addEventListener('mousedown', (event) => {
+        const target = event.target;
+        if (!(target.dataset.selectControl && target.dataset.selectControl === 'selected')) {
+            return null;
+        }
+        if (window.getComputedStyle(target.nextElementSibling).visibility === 'visible') {
+            setTimeout(() => void document.activeElement.blur(), 0);
+        }
+    });
+</script>

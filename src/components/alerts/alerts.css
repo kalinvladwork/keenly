@@ -1,0 +1,49 @@
+.alert {
+  --alert-color: var(--black);
+  --alert-background: none;
+  color: var(--alert-color);
+  display: none;
+  align-items: center;
+  background-color: var(--alert-background);
+}
+.mainWrapper.hasAlert .alert {
+  display: flex;
+}
+.alert.isGreen {
+  --alert-color: var(--white);
+  --alert-background: #72B01D;
+}
+.alert.isRed {
+  --alert-color: var(--white);
+  --alert-background: #D93831;
+}
+.alert.isOrange {
+  --alert-color: var(--white);
+  --alert-background: #F0950F;
+}
+
+.alertContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - (2.5rem + 1.75rem));
+}
+.alertContainer button {
+  line-height: 1;
+  color: var(--alert-color);
+  margin: 0 2rem;
+  padding: 0.5rem 1rem;
+  border-color: var(--alert-color);
+}
+
+.alertClose {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1.75rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=alerts.css.map */

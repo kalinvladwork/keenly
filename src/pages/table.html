@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+    <link rel="stylesheet" href="/src/pages/style-table.css" />
+    <title>Statistic</title>
+</head>
+<body>
+
+<div class="mainWrapper">
+    <header class="mainHeader">
+        <h2>Statistic</h2>
+        <%- include('../components/tabs/tabs.html') %>
+    </header>
+    <aside class="mainAside">
+        <nav>
+            <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'company', 'dropdownButton': 'Please select 1111111111111111111111111111', 'dropdownItem1': 'This year', 'dropdownItem2': 'This year 2', 'dropdownItem3': 'This year 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, iste?'}) %>
+            <%- include('../components/navItem/navItem.html', {'navItemTooltip': '', 'navItemClasses': '', 'iconClass': 'icon-trending-up', 'content': 'Statistic'}) %>
+            <%- include('../components/navItem/navItem.html', {'navItemTooltip': '', 'navItemClasses': '', 'iconClass': 'icon-shopping-cart', 'content': 'Orders'}) %>
+            <%- include('../components/navItem/navItem.html', {'navItemTooltip': '', 'navItemClasses': '', 'iconClass': 'icon-home', 'content': 'Stock'}) %>
+            <%- include('../components/navItem/navItem.html', {'navItemTooltip': '', 'navItemClasses': '', 'iconClass': 'icon-volume-2', 'content': 'Advertising'}) %>
+        </nav>
+        <%- include('../components/profile/profile.html', {'profileClasses': '', 'userpic': 'h', 'content': 'Helen'}) %>
+    </aside>
+    <main>
+        <div class="filters">
+            <div class="buttonGroup">
+                <%- include('../components/button/button.html', {'type': 'button', 'buttonClasses': 'isGrey', 'buttonIconClasses': '', 'content':'Today'}) %>
+                <%- include('../components/button/button.html', {'type': 'button', 'buttonClasses': 'isGrey', 'buttonIconClasses': '', 'content':'This month'}) %>
+                <%- include('../components/button/button.html', {'type': 'button', 'buttonClasses': 'isGrey', 'buttonIconClasses': '', 'content':'3 month'}) %>
+                <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'isBlue small', 'dropdownButton': 'More', 'dropdownItem1': '6 months', 'dropdownItem2': 'This year', 'dropdownItem3': 'Custom range'}) %>
+            </div>
+            <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'isGrey small', 'dropdownButton': 'All marketplaces', 'dropdownItem1': 'USA: Amazon.com', 'dropdownItem2': 'This year', 'dropdownItem3': 'Custom range'}) %>
+            <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'isGrey small', 'dropdownButton': 'All products', 'dropdownItem1': '6 months', 'dropdownItem2': 'This year', 'dropdownItem3': 'Custom range'}) %>
+        </div>
+
+        <div>
+            <div class="tableWrapper">
+                <%- include('../components/table/table.html') %>
+            </div>
+        </div>
+
+    </main>
+</div>
+</body>
+</html>

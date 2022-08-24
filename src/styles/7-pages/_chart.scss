@@ -1,0 +1,30 @@
+.contentChart {
+  --aside-legend-width: 46rem;
+
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: 1fr var(--aside-legend-width);
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    "content aside"
+    ". aside";
+}
+
+.content {
+  grid-area: content;
+
+  &.isSticky {
+    position: sticky;
+    top: 7rem;
+  }
+}
+
+.asideLegend {
+  grid-area: aside;
+  height: auto;
+}
+
+.subTitle {
+  margin: 2rem 0 1.5rem;
+}
+

@@ -1,0 +1,191 @@
+.formControl.password .errorProgress {
+  display: flex;
+}
+.formControl.password i {
+  color: rgba(0, 0, 0, 0.35);
+}
+.formControl.hasError {
+  --error-color: var(--accent-color);
+}
+.formControl.hasError .formControlInput {
+  --g-form-control-border: 1px solid var(--accent-color);
+}
+.formControl.hasError .error {
+  --form-control-error-height: 2.5rem;
+  display: inline-block;
+}
+.formControl.weakError .error, .formControl.normalError .error, .formControl.secureError .error {
+  --form-control-error-height: 2.5rem;
+  display: inline-block;
+}
+.formControl.weakError {
+  --error-color: var(--accent-color);
+}
+.formControl.weakError .errorProgressItem:first-child {
+  --error-color: var(--accent-color);
+}
+.formControl.normalError {
+  --error-color: var(--warning-color);
+}
+.formControl.normalError .errorProgressItem:not(:last-child) {
+  --error-color: var(--warning-color);
+}
+.formControl.secureError {
+  --error-color: var(--success-color);
+}
+.formControl.secureError .errorProgressItem {
+  --error-color: var(--success-color);
+}
+.formControl.hasIconRight .formControlInput, .formControl.hasIconLeft .formControlInput {
+  display: flex;
+}
+.formControl.hasIconRight .formControlInput .inputIcon, .formControl.hasIconLeft .formControlInput .inputIcon {
+  display: flex;
+}
+.formControl.hasIconRight input {
+  order: 1;
+  padding-right: 0;
+}
+.formControl.hasIconRight .inputIcon {
+  order: 2;
+}
+.formControl.hasIconLeft input {
+  order: 2;
+  padding-left: 0;
+}
+.formControl.hasIconLeft .inputIcon {
+  order: 1;
+}
+.formControl.hasAddonLeft .formControlInput, .formControl.hasAddonRight .formControlInput {
+  display: flex;
+  overflow: hidden;
+}
+.formControl.hasAddonLeft .formControlInput .addon, .formControl.hasAddonRight .formControlInput .addon {
+  display: flex;
+}
+.formControl.hasAddonRight input {
+  order: 1;
+}
+.formControl.hasAddonRight .addon {
+  order: 2;
+}
+.formControl.hasAddonLeft input {
+  order: 2;
+}
+.formControl.hasAddonLeft .addon {
+  order: 1;
+}
+
+.formControlInput {
+  --form-control-height: 6rem;
+  --g-form-control-border: 1px solid rgba(0, 0, 0, 0.1);
+  --g-form-control-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.25);
+  font-size: var(--g-font-size);
+  line-height: var(--g-line-height);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: unset;
+  height: var(--form-control-height);
+  border: var(--g-form-control-border);
+  border-radius: 1rem;
+  background-color: var(--white);
+}
+.formControlInput:focus-within {
+  --g-form-control-border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.formControlInput input {
+  line-height: inherit;
+  color: currentColor;
+  width: 100%;
+  height: inherit;
+  padding: 0 2rem;
+  border: 0 none transparent;
+  background-color: transparent;
+}
+.formControlInput input:active, .formControlInput input:focus {
+  outline: 0 none;
+}
+.formControlInput ::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.inputIcon {
+  font-size: 1.5rem;
+  color: var(--neutral-light-color);
+  text-decoration: none;
+  display: none;
+  flex: 1 0 var(--form-control-height);
+  align-items: center;
+  justify-content: center;
+  width: var(--form-control-height);
+  height: var(--form-control-height);
+}
+.inputIcon i {
+  font-size: 2.5rem;
+}
+
+.addon {
+  font-size: var(--g-font-size);
+  line-height: 1;
+  color: var(--black);
+  display: none;
+  flex: 1 0 var(--form-control-height);
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+  height: var(--form-control-height);
+  padding: 1.75rem;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.addon .addonIcon {
+  line-height: 0;
+  margin-right: 1rem;
+}
+
+.errorProgress {
+  display: none;
+  margin: 2rem -0.5rem 0;
+}
+.errorProgress .errorProgressItem {
+  --error-color: rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  width: 100%;
+  height: 3px;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  background-color: var(--error-color);
+}
+
+.error {
+  --form-control-error-height: 0;
+  --fade-animation-height: var(--form-control-error-height);
+  font-size: var(--g-font-size);
+  line-height: 1;
+  font-weight: normal;
+  color: var(--error-color);
+  display: none;
+  margin-top: 1rem;
+  animation-name: fade-in-down;
+  animation-play-state: running;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes fade-in-down {
+  from {
+    height: 0;
+    transform: translateY(var(--fade-animation-height, 2rem));
+    opacity: 0;
+  }
+  to {
+    height: var(--fade-animation-height, 2rem);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=form%D0%A1ontrol.css.map */

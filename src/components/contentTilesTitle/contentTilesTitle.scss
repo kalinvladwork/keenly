@@ -1,0 +1,16 @@
+.contentTilesTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(1, 0, 128, 0.05);
+}

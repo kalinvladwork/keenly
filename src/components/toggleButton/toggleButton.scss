@@ -1,0 +1,55 @@
+.toggleButton {
+  display: inline-block;
+  width: 6rem;
+  height: 3.75rem;
+  margin: 0;
+  position: relative;
+
+  input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:checked + .slider {
+      background-color: var(--purple);
+    }
+
+    &:focus + .slider {
+      box-shadow: 0 0 1px var(--purple);
+    }
+
+    &:checked + .slider:before {
+      transform: translateX(18px);
+    }
+  }
+
+  .slider {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+
+    &:before {
+      width: 22px;
+      height: 22px;
+      background-color: var(--white);
+      position: absolute;
+      bottom: 4px;
+      left: 4px;
+      content: "";
+      transition: 0.4s;
+    }
+
+    &.round {
+      border-radius: 30px;
+
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  }
+}

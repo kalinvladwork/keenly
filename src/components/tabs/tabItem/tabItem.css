@@ -1,0 +1,27 @@
+.tabItem {
+  --tab-item-color: rgba(0, 0, 0, 0.5);
+  --tab-item-shadow: none;
+  --tab-item-weight: 500;
+  font-weight: var(--tab-item-weight);
+  color: var(--tab-item-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 0;
+  padding: 1.75rem 0.01rem;
+  box-shadow: var(--tab-item-shadow);
+  cursor: pointer;
+}
+.tabItem + .tabItem {
+  margin-left: 4rem;
+}
+.tabItem i {
+  margin-right: 1.25rem;
+}
+.tabItem.isActive {
+  --tab-item-color: #010080;
+  --tab-item-shadow: inset 0px -2px 0px #010080;
+  --tab-item-weight: 700;
+}
+
+/*# sourceMappingURL=tabItem.css.map */

@@ -1,0 +1,120 @@
+.button {
+  --button-color: var(--black);
+  --button-background: none;
+  --button-weight: 500;
+
+  line-height: 3rem;
+  font-weight: var(--button-weight);
+  color: var(--button-color);
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  white-space: nowrap;
+  padding: 0.4rem 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: var(--button-background);
+  outline: none;
+  cursor: pointer;
+  transition: background-color 500ms;
+
+  i {
+    display: none;
+  }
+
+  .spinner {
+    display: none;
+  }
+
+  &.large {
+    --button-weight: 700;
+
+    font-size: 2rem;
+    height: 6rem;
+  }
+
+  &.fullWidth {
+    display: flex;
+    width: 100%;
+  }
+
+  &.hasIcon {
+    i {
+      display: flex;
+      margin: 0 1rem 0 0;
+    }
+
+    &.large {
+      i {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &.isLoading {
+    i{
+      display: none;
+    }
+
+    .spinner {
+      display: inline-block;
+    }
+  }
+
+  &.isActive {
+    --button-color: var(--white); //TODO: переписать все после готового дизайна
+    --button-background: var(--purple);
+    --button-weight: 600;
+  }
+
+  //TODO: нормальные цвета, переменные и названия
+  &.isBlue {
+    --button-color: var(--white);
+    --button-background: #3874EA;
+
+    &:hover {
+      --button-background: #1F5BC7;
+    }
+  }
+
+  &.isRed {
+    --button-color: var(--white);
+    --button-background: #D93831;
+
+    &:hover {
+      --button-background: #B52821;
+    }
+  }
+
+  &.isOrange {
+    --button-color: var(--white);
+    --button-background: #F0950F;
+
+    &:hover {
+      --button-background: #C0770C;
+    }
+  }
+
+  &.isBase {
+    --button-color: var(--white);
+    --button-background: var(--purple);
+
+    &:hover {
+      --button-background: #01004D;
+    }
+  }
+
+  &.isGrey {
+    --button-color: var(--black);
+    --button-background: #F5F4F6;
+
+    &:hover {
+      --button-background: #F5F4F6;
+    }
+  }
+}
+
+

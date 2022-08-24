@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+    <link rel="stylesheet" href="/src/pages/tiles.css" />
+    <title>Statistic</title>
+</head>
+<body>
+
+<div class="mainWrapper hasAlert">
+    <%- include('../components/alerts/alerts.html', {'alertClasses': 'isOrange', 'alertText': 'Сегодня последний день бесплатного доступа. Поделитесь впечатлениями о системе и получите еще месяц бесплатно.'}) %>
+
+    <header class="mainHeader">
+        <h2>Statistic</h2>
+        <%- include('../components/tabs/tabs.html') %>
+    </header>
+    <aside class="mainAside">
+        <nav>
+            <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'company', 'dropdownButton': 'Please select 1111111111111111111111111111', 'dropdownItem1': 'This year', 'dropdownItem2': 'This year 2', 'dropdownItem3': 'This year 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, iste?'}) %>
+            <%- include('../components/navItem/navItem.html', {'navItemTooltip': '', 'navItemClasses': 'isActive', 'iconClass': 'icon-trending-up', 'content': 'Statistic'}) %>
+            <%- include('../components/navItem/navItem.html', {'navItemTooltip': 'Мы активно работает над этим функционалом. Он появится в ближайших обновлениях 😉', 'navItemClasses': 'isDisabled', 'iconClass': 'icon-shopping-cart', 'content': 'Orders'}) %>
+            <%- include('../components/navItem/navItem.html', {'navItemTooltip': 'Мы активно работает над этим функционалом. Он появится в ближайших обновлениях 😉', 'navItemClasses': 'isDisabled', 'iconClass': 'icon-home', 'content': 'Stock'}) %>
+            <%- include('../components/navItem/navItem.html', {'navItemTooltip': '', 'navItemClasses': '', 'iconClass': 'icon-volume-2', 'content': 'Advertising'}) %>
+        </nav>
+        <%- include('../components/profile/profile.html', {'profileClasses': '', 'userpic': 'h', 'content': 'Helen'}) %>
+    </aside>
+    <main>
+        <div class="filters">
+            <div class="buttonGroup">
+                <%- include('../components/button/button.html', {'type': 'button', 'buttonClasses': 'isGrey', 'buttonIconClasses': '', 'content':'Today'}) %>
+                <%- include('../components/button/button.html', {'type': 'button', 'buttonClasses': 'isActive', 'buttonIconClasses': '', 'content':'This month'}) %>
+                <%- include('../components/button/button.html', {'type': 'button', 'buttonClasses': 'isGrey', 'buttonIconClasses': '', 'content':'3 month'}) %>
+                <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'isBlue small', 'dropdownButton': 'More', 'dropdownItem1': '6 months', 'dropdownItem2': 'This year', 'dropdownItem3': 'Custom range'}) %>
+            </div>
+            <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'isGrey small', 'dropdownButton': 'All marketplaces', 'dropdownItem1': 'USA: Amazon.com', 'dropdownItem2': 'This year', 'dropdownItem3': 'Custom range'}) %>
+            <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'isGrey small', 'dropdownButton': 'All products', 'dropdownItem1': '6 months', 'dropdownItem2': 'This year', 'dropdownItem3': 'Custom range'}) %>
+        </div>
+
+        <div class="contentTiles">
+
+            <%- include('../components/contentTilesTitle/contentTilesTitle.html', {'iconClass': 'icon-shopping-bag', 'title': 'Sales'}) %>
+
+            <div class="contentTilesRow">
+
+                <div class="sectionBillet tilesCard">
+                    <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': 'mb1', 'tilesCardInfoTitle': 'SaLES RESULTS', 'tilesCardCost': '$ 123 937.85', 'tilesCardSubCostClasses': 'success','tilesCardSubCostArrow': '↑', 'tilesCardSubCost': '$ 37492.20 (30.25%)'}) %>
+                    <img src="/src/assets/chart-2.svg" alt="">
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <div class="tilesCardRow mb4">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'UNITS', 'tilesCardCost': '8 463', 'tilesCardSubCostClasses': 'accent','tilesCardSubCostArrow': '↓', 'tilesCardSubCost': '846 (10%)'}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'BUY BOX WINS', 'tilesCardCost': '96%', 'tilesCardSubCostClasses': 'accent','tilesCardSubCostArrow': '↓', 'tilesCardSubCost': '1.25%'}) %>
+                    </div>
+
+                    <div class="tilesCardRow">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'ORDERS', 'tilesCardCost': '8 463', 'tilesCardSubCostClasses': 'accent','tilesCardSubCostArrow': '↓', 'tilesCardSubCost': '846 (10%)'}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': '% Refunds', 'tilesCardCost': '96%', 'tilesCardSubCostClasses': 'success','tilesCardSubCostArrow': '↑', 'tilesCardSubCost': '18.25%'}) %>
+                    </div>
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <div class="tilesCardRow mb2">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'REFUNDS', 'tilesCardCost': '13', 'tilesCardSubCostClasses': 'accent','tilesCardSubCostArrow': '↓', 'tilesCardSubCost': '846 (10%)'}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'REFUND cost', 'tilesCardCost': '$ -3 133.47', 'tilesCardSubCostClasses': 'success','tilesCardSubCostArrow': '↑', 'tilesCardSubCost': '18.25%'}) %>
+                    </div>
+                    <div class="tilesCardRow progressRow">
+                        <div class="tilesCardInfo progressTitle">Style</div>
+                        <div class="tilesCardInfo">
+                            <%- include('../components/progressbar/progressbar.html', {'dataSizeValue': '6', 'widthValue': '100'}) %>
+                        </div>
+                    </div>
+                    <div class="tilesCardRow progressRow">
+                        <div class="tilesCardInfo progressTitle">Too large</div>
+                        <div class="tilesCardInfo">
+                            <%- include('../components/progressbar/progressbar.html', {'dataSizeValue': '2', 'widthValue': '33'}) %>
+                        </div>
+                    </div>
+                    <div class="tilesCardRow progressRow">
+                        <div class="tilesCardInfo progressTitle">Undeliverable refused</div>
+                        <div class="tilesCardInfo">
+                            <%- include('../components/progressbar/progressbar.html', {'dataSizeValue': '5', 'widthValue': '84'}) %>
+                        </div>
+                    </div>
+                    <div class="tilesCardRow progressRow">
+                        <div class="tilesCardInfo progressTitle">Not as described</div>
+                        <div class="tilesCardInfo">
+                            <%- include('../components/progressbar/progressbar.html', {'dataSizeValue': '3', 'widthValue': '50'}) %>
+                        </div>
+                    </div>
+                    <div class="tilesCardRow progressRow">
+                        <div class="tilesCardInfo progressTitle">Other</div>
+                        <div class="tilesCardInfo">
+                            <%- include('../components/progressbar/progressbar.html', {'dataSizeValue': '1', 'widthValue': '16'}) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('../components/contentTilesTitle/contentTilesTitle.html', {'iconClass': 'icon-volume-2', 'title': 'Advertising'}) %>
+
+            <div class="contentTilesRow">
+                <div class="sectionBillet tilesCard">
+                    <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': 'mb1', 'tilesCardInfoTitle': 'ADVERTISING COST', 'tilesCardCost': '$ 95 000.85', 'tilesCardSubCostClasses': 'success','tilesCardSubCostArrow': '↓', 'tilesCardSubCost': '$ 9 737.59 (10.25%)'}) %>
+                    <img src="/src/assets/chart-empty.svg" alt="">
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': 'mb1', 'tilesCardInfoTitle': 'GROSS PROFIT', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    <img src="/src/assets/chart-empty.svg" alt="">
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <div class="tilesCardRow mb4">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'ACOS', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'CPC', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    </div>
+
+                    <div class="tilesCardRow">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'CTR', 'tilesCardCost': '0%', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'Conversion Rate', 'tilesCardCost': '0%', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('../components/contentTilesTitle/contentTilesTitle.html', {'iconClass': 'icon-dollar-sign', 'title': 'PROFIT'}) %>
+
+            <div class="contentTilesRow">
+                <div class="sectionBillet tilesCard">
+                    <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': 'mb1', 'tilesCardInfoTitle': 'ADVERTISING COST', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    <img src="/src/assets/chart-empty.svg" alt="">
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <div class="tilesCardRow mb4">
+                        <div class="tilesCardInfo">
+                            <h5>ACOS</h5>
+                            <div class="loaded"></div>
+                        </div>
+                        <div class="tilesCardInfo">
+                            <h5>CPC</h5>
+                            <div class="loaded"></div>
+                        </div>
+                    </div>
+                    <div class="tilesCardInfo">
+                        <h5>CTR</h5>
+                        <div class="loaded"></div>
+                    </div>
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <div class="tilesCardRow mb4">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'ACOS', 'tilesCardCost': '0%', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'CPC', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    </div>
+                    <div class="tilesCardEmpty">
+                        <p>
+                            <span class="uTextColorGrey">No reason to refund <br>
+                            for the selected period</span> 😎
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentTilesRow">
+                <div class="sectionBillet tilesCard">
+                    <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': 'mb1', 'tilesCardInfoTitle': 'ADVERTISING COST', 'tilesCardCost': '$ 95 000.85', 'tilesCardSubCostClasses': 'success','tilesCardSubCostArrow': '↓', 'tilesCardSubCost': '$ 9 737.59 (10.25%)'}) %>
+                    <img src="/src/assets/chart-empty.svg" alt="">
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': 'mb1', 'tilesCardInfoTitle': 'GROSS PROFIT', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    <img src="/src/assets/chart-empty.svg" alt="">
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <div class="tilesCardRow mb4">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'ACOS', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'CPC', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    </div>
+
+                    <div class="tilesCardRow">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'CTR', 'tilesCardCost': '0%', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'Conversion Rate', 'tilesCardCost': '0%', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('../components/contentTilesTitle/contentTilesTitle.html', {'iconClass': 'icon-dollar-sign', 'title': 'PROFIT'}) %>
+
+            <div class="contentTilesRow">
+                <div class="sectionBillet tilesCard">
+                    <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': 'mb1', 'tilesCardInfoTitle': 'ADVERTISING COST', 'tilesCardCost': '$ 95 000.85', 'tilesCardSubCostClasses': 'success','tilesCardSubCostArrow': '↓', 'tilesCardSubCost': '$ 9 737.59 (10.25%)'}) %>
+                    <img src="/src/assets/chart-empty.svg" alt="">
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': 'mb1', 'tilesCardInfoTitle': 'GROSS PROFIT', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    <img src="/src/assets/chart-empty.svg" alt="">
+                </div>
+
+                <div class="sectionBillet tilesCard">
+                    <div class="tilesCardRow mb4">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'ACOS', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'CPC', 'tilesCardCost': '$ 0', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    </div>
+
+                    <div class="tilesCardRow">
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'CTR', 'tilesCardCost': '0%', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                        <%- include('../components/tilesCardInfo/tilesCardInfo.html', {'tilesCardInfoClasses': '', 'tilesCardInfoTitle': 'Conversion Rate', 'tilesCardCost': '0%', 'tilesCardSubCostClasses': '','tilesCardSubCostArrow': '', 'tilesCardSubCost': ''}) %>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('../components/contentTilesTitle/contentTilesTitle.html', {'iconClass': 'icon-dollar-sign', 'title': 'PROFIT'}) %>
+
+
+
+        </div>
+
+    </main>
+</div>
+</body>
+</html>

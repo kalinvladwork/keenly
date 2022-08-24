@@ -1,0 +1,116 @@
+.logoGroup {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0 9.5rem;
+
+  &.ifSteps {
+    margin: 2rem 0 6rem;
+  }
+
+  a:first-child {
+    text-align: right;
+    width: 50%;
+    margin-right: 3rem;
+  }
+
+  a:last-child {
+    width: 50%;
+    margin-left: 3rem;
+  }
+}
+
+hr.vertical {
+  width: 1px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.connect {
+  width: 138rem;
+  padding: 5rem 7rem;
+  border-radius: 1.5rem;
+  background-color: var(--white);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.step {
+  display: flex;
+  margin-top: -0.5rem;
+  padding-top: 0.5rem;
+
+  &:last-child {
+    .stepContent {
+      border-left: 1px solid rgba(255, 255, 255, 0);
+    }
+
+    .stepHeader {
+      &:after {
+        display: block;
+        width: 0;
+        height: 9px;
+        border-left: 1px solid rgba(1, 0, 128, 0.3);
+        position: absolute;
+        top: 0;
+        left: -7.1rem;
+        content: "";
+      }
+    }
+  }
+}
+
+.stepImg {
+  width: 50%;
+  margin-bottom: 12.5rem;
+  padding-right: 7rem;
+
+  img {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+  }
+}
+
+.stepContent {
+  width: 50%;
+  padding-left: 7rem;
+  border-left: 1px solid rgba(1, 0, 128, 0.3);
+
+  h3 {
+    margin-bottom: 4rem;
+  }
+
+  p {
+    margin: 0 0 3rem 0;
+  }
+
+  .button {
+    width: 26rem;
+  }
+}
+
+.stepHeader {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.35);
+  display: inline-flex;
+  margin-bottom: 1rem;
+  position: relative;
+
+  &.first {
+    &:before {
+      top: 0;
+    }
+  }
+
+  &:before {
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--purple);
+    position: absolute;
+    top: 0.6rem;
+    left: -7.6rem;
+    content: "";
+  }
+}

@@ -1,0 +1,50 @@
+.profile {
+  --navItem-color: var(--black);
+  --navItem-background: none;
+  --navItem-weight: 500;
+
+  font-weight: var(--navItem-weight);
+  color: var(--navItem-color);
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: var(--navItem-background);
+  outline: none;
+  cursor: pointer;
+  transition: all 300ms;
+
+  &:hover,
+  &.isActive {
+    --navItem-color: #010080;
+    --navItem-background: rgba(1, 0, 128, 0.05);
+    --navItem-weight: 700;
+  }
+
+  .userpic {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    border-radius: 50%;
+    background-color: #010080;
+  }
+
+  i {
+    font-size: 2rem;
+    line-height: 0;
+  }
+}
+
+

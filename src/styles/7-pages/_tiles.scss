@@ -1,0 +1,51 @@
+.contentTiles {
+  display: grid;
+  //grid-gap: 4rem;
+  //grid-template-columns: repeat(3, 1fr);
+  //grid-template-rows: min-content 1fr;
+}
+
+.contentTilesRow {
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 3rem;
+}
+
+.tilesCardInfo {
+  .loaded {
+    margin-top: 2rem;
+    width: 11rem;
+  }
+}
+
+.tilesCard {
+  .tilesCardRow {
+    display: flex;
+
+    .tilesCardInfo {
+      width: 50%;
+    }
+  }
+}
+
+.tilesCardEmpty {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressRow {
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.progressTitle {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+

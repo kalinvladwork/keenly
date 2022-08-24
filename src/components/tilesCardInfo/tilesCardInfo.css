@@ -1,0 +1,19 @@
+.tilesCardSubCost {
+  font-size: var(--g-font-size);
+  line-height: var(--g-line-height);
+  font-weight: 500;
+}
+.tilesCardSubCost.success {
+  color: var(--success-color);
+}
+.tilesCardSubCost.accent {
+  color: var(--accent-color);
+}
+
+.tilesCardSubCostArrow {
+  font-size: calc(var(--g-font-size) * 1.25);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/*# sourceMappingURL=tilesCardInfo.css.map */

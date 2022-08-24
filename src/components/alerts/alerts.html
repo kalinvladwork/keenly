@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/src/components/alerts/alerts.css" />
+<div class="alert <%= alertClasses %>">
+    <div class="alertContainer">
+        <p><%= alertText %></p>
+        <%- include('../../components/button/button.html', {'type': 'button', 'buttonClasses': '', 'buttonIconClasses': '', 'content':'Записаться на интервью'}) %>
+    </div>
+    <button type="button" class="alertClose">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.337087 0.337087C0.703204 -0.0290291 1.2968 -0.0290291 1.66291 0.337087L6 4.67417L10.3371 0.337087C10.7032 -0.0290291 11.2968 -0.0290291 11.6629 0.337087C12.029 0.703204 12.029 1.2968 11.6629 1.66291L7.32582 6L11.6629 10.3371C12.029 10.7032 12.029 11.2968 11.6629 11.6629C11.2968 12.029 10.7032 12.029 10.3371 11.6629L6 7.32582L1.66291 11.6629C1.2968 12.029 0.703204 12.029 0.337087 11.6629C-0.0290291 11.2968 -0.0290291 10.7032 0.337087 10.3371L4.67417 6L0.337087 1.66291C-0.0290291 1.2968 -0.0290291 0.703204 0.337087 0.337087Z" fill="white"/>
+        </svg>
+    </button>
+</div>
+
+

@@ -1,0 +1,14 @@
+.formGroup {
+  margin-bottom: 3rem;
+
+  label:not(.toggleButton) {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  &.isHorizontal {
+    display: flex;
+    align-items: center;
+  }
+}

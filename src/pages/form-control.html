@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Form controls example</title>
+    <style>
+        body {
+            overflow: auto!important;
+        }
+        .wrapperDropdownCompany {
+            width: 20rem;
+        }
+    </style>
+</head>
+<body>
+<main>
+<div class="sectionBillet">
+
+    <div class="wrapperDropdownCompany">
+        <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'company', 'dropdownButton': 'Please select 1111111111111111111111111111', 'dropdownItem1': 'This year', 'dropdownItem2': 'This year 2', 'dropdownItem3': 'This year 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, iste?'}) %>
+
+    </div>
+
+    <%- include('../components/dropdown/dropdown.html', {'dropdownClasses': 'small', 'dropdownButton': 'Please select 1111111111111111111111111111', 'dropdownItem1': 'This year', 'dropdownItem2': 'This year 2', 'dropdownItem3': 'This year 3'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'hasAddonLeft hasError', 'errorText': 'error phone', 'inputType': 'tel', 'inputValue': '99999999999', 'inputPlaceholder': '123-45-67',  'inputId': ''}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'hasAddonLeft', 'errorText': '', 'inputType': 'tel', 'inputValue': '', 'inputPlaceholder': '123-45-67',  'inputId': ''}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'hasAddonRight', 'errorText': '', 'inputType': 'tel', 'inputValue': '', 'inputPlaceholder': '123-45-67',  'inputId': ''}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password hasIconLeft', 'errorText': '', 'inputType': 'password', 'inputValue': '', 'inputPlaceholder': 'Enter your password',  'inputId': 'password1'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password hasIconRight', 'errorText': '', 'inputType': 'password', 'inputValue': 'password', 'inputPlaceholder': 'Enter your password',  'inputId': 'password2'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'hasError', 'errorText': 'error error error', 'inputType': 'email', 'inputValue': '', 'inputPlaceholder': 'address@domain.com',  'inputId': ''}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': '', 'errorText': '', 'inputType': 'tel', 'inputValue': '', 'inputPlaceholder': '123-45-67', 'inputId': ''}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password weakError hasIconRight', 'errorText': 'Weak password', 'inputType': 'password', 'inputValue': 'password', 'inputPlaceholder': 'Enter your password', 'inputId': 'password3'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password normalError hasIconRight', 'errorText': 'Normal password', 'inputType': 'password', 'inputValue': 'password', 'inputPlaceholder': 'Enter your password', 'inputId': 'password3'}) %>
+    <%- include('../components/formСontrol/formСontrol.html', {'formControlClasses': 'password secureError hasIconRight', 'errorText': 'Secure password', 'inputType': 'password', 'inputValue': 'password', 'inputPlaceholder': 'Enter your password', 'inputId': 'password3'}) %>
+    <%- include('../components/checkbox/checkbox.html', {'checkboxClasses': 'isColor1', 'checkboxLabel': 'checkbox label', 'checkboxDisabled': ''}) %>
+    <%- include('../components/checkbox/checkbox.html', {'checkboxClasses': 'uBold isColor2', 'checkboxLabel': 'checkbox label', 'checkboxDisabled': ''}) %>
+    <%- include('../components/checkbox/checkbox.html', {'checkboxClasses': 'isColor6', 'checkboxLabel': 'checkbox label', 'checkboxDisabled': 'disabled'}) %>
+    <%- include('../components/button/button.html', {'type': 'button', 'buttonClasses': 'fullWidth large uTextCenter isLoading hasIcon isBlue', 'buttonIconClasses': 'icon-facebook', 'content': ''}) %>
+    <div class="loaded"></div>
+
+</div>
+
+</main>
+
+</body>
+</html>

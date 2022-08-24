@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/src/components/formСontrol/formСontrol.css" />
+<div class="formControl <%= formControlClasses %>">
+    <div class="formControlInput">
+<!--            TODO: для телефонов можно прописать pattern, для адонов иконки подставлять и разный текст если понадобиться через дата атрибут записывать-->
+        <div class="addon">
+            <i class="addonIcon">
+                <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="24" height="16" rx="2" fill="url(#pattern0)"/>
+                    <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_380_3012" transform="scale(0.00392157 0.00588235)"/>
+                        </pattern>
+                        <image id="image0_380_3012" width="255" height="170" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAACqCAYAAABiS5mOAAAEaUlEQVR4Ae3WQREAIRDEwHV5UpFycpZCR/qBASYhzHxnHXeAgSADRg+O7sEXvMcA+cmPgSgDho8Or/7qT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKgOGjwyu/8pOf/BiIMmD46PDKr/zkJz8GogwYPjq88is/+cmPgSgDho8Or/zKT37yYyDKwP6zjjvAQI+BMXpvdJvb/DFAfj8fP78oA+SPDq/+6k9+8it/lAHyR4dXfuUnP/mVP8oA+aPDK7/yk5/8yh9lgPzR4ZVf+clPfuWPMkD+6PDKr/zkJ7/yRxkgf3R45Vd+8pNf+aMMkD86vPIrP/nJr/xRBsgfHV75lZ/85Ff+KAPkjw6v/MpPfvIrf5QB8keHV37lJz/5lT/KAPmjwyu/8pOf/MofZYD80eGVX/nJT37ljzJA/ujwyq/85Ce/8kcZIH90eOVXfvKTX/mjDJA/OrzyKz/5ya/8UQbIHx1e+ZWf/ORX/igD5I8Or/zKT37yK3+UAfJHh1d+5Sc/+ZU/ygD5o8Mrv/KTn/zKH2WA/NHhlV/5yU9+5Y8yQP7o8Mqv/OQnv/JHGSB/dHjlV37yk1/5owyQPzq88is/+cmv/FEGyB8dXvmVn/zkV/4oA+SPDq/8yk9+8it/lAHyR4dXfuUnP/mVP8oA+aPDK7/yk5/8yh9lgPzR4ZVf+clPfuWPMkD+6PDKr/zkJ7/yRxkgf3R45Vd+8pNf+aMMkD86vPIrP/nJr/xRBsgfHV75lZ/85Ff+KAPkjw6v/MpPfvIrf5QB8keHV37lJz/5lT/KAPmjwyu/8pOf/MofZYD80eGVX/nJT37ljzJA/ujwyq/85Ce/8kcZIH90eOVXfvKTX/mjDJA/OrzyKz/5ya/8UQbIHx1e+ZWf/ORX/igD5I8Or/zKT37yK3+UgQt2k4Mq3hyxwQAAAABJRU5ErkJggg=="/>
+                    </defs>
+                </svg>
+            </i>
+            <span>
+                +38
+            </span>
+        </div>
+        <a href="#" class="inputIcon" onclick="return show_hide_password(this);">
+            <i class="icon-eye"></i>
+        </a>
+        <input id="<%= inputId %>" type="<%= inputType %>" value="<%= inputValue %>" placeholder="<%= inputPlaceholder %>">
+    </div>
+    <div class="errorProgress">
+        <span class="errorProgressItem"></span>
+        <span class="errorProgressItem"></span>
+        <span class="errorProgressItem"></span>
+    </div>
+    <span class="error"><%= errorText %></span>
+</div>
+
+<script rel="script">
+    // показать пароль
+    function show_hide_password(target){
+        var input = document.getElementById('<%= inputId %>');
+        if (input.getAttribute('type') == 'password') {
+            // TODO: вместо класса view подставлять класс иконки icon-eye-off-1
+            target.classList.add('view');
+            input.setAttribute('type', 'text');
+        } else {
+            target.classList.remove('view');
+            input.setAttribute('type', 'password');
+        }
+        return false;
+    }
+</script>

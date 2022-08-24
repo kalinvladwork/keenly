@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="/src/components/navItem/navItem.css" />
+<!--data-tooltip подставлять только туда, где нужны тултипы, так что из этого компонента его нужно убрать, сами тулипы как компонент находятся в itcss-->
+<a class="navItem hasIcon <%= navItemClasses %>" data-tooltip="<%= navItemTooltip %>">
+    <i class="<%= iconClass %>"></i>
+    <%= content %>
+</a>
